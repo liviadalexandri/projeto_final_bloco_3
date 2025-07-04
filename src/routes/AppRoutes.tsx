@@ -3,18 +3,19 @@ import { AppLayout } from "../components/AppLayout";
 import Home from "../pages/Home";
 import { NotFound } from "../components/NotFound";
 import { Categorias } from "../pages/Categorias";
+import { CadastrarCategoria } from "../pages/CadastrarCategorias";
+
 
 export function AppRoutes() {
-    return (
-        <Routes>
-            <Route path="/" element={<AppLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/categorias" element={<Categorias/>} />
+  return (
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/categorias" element={<Categorias />} />
+        <Route path="/cadastrarcategoria" element={<CadastrarCategoria />} />
+      </Route>
 
-            </Route >
-            <Route path="*" element={<NotFound />} />
-
-        </Routes>
-
-    )
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }
